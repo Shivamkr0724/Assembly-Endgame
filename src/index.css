@@ -1,0 +1,174 @@
+* {
+    box-sizing: border-box;
+    font-family: "Hanken Grotesk", Arial, sans-serif;
+}
+
+body {
+    margin: 0;
+    
+    background-color: #262626;
+    color: #D9D9D9;
+    padding: 20px;
+    height: 100vh;
+}
+
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.upperPart{
+  max-width: 420px;
+}
+
+header {
+  text-align: center;
+}
+
+header > h1{
+  color: #F9F4DA;
+}
+
+header > p{
+  font-size: 1.2rem;
+  max-width: 420px;
+  color: #8E8E8E;
+}
+
+.game-status{
+  border-radius: 5px;
+  display: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 60px;
+  margin-block: 30px;
+  color: #F9F4DA;
+}
+
+.game-status.won{
+  background-color: #10A95B;
+}
+
+.game-status.lost{
+  background-color: #BA2A2A;
+}
+.game-status.farewell{
+   background-color: #7A5EA7;
+   border: 1px dashed #323232;
+}
+
+.game-status > h2{
+  margin: 5px;
+  font-weight: 500;
+  margin-bottom: 0px;
+
+}
+
+.game-status > p{
+  margin: 5px;
+  margin-top: 0px;
+  font-size: 1.24rem;
+}
+
+.game-status > p.farewell-message{
+  font-style: italic;
+  font-weight: 400;
+}
+
+.language-chips{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  justify-content: center;
+  max-width: 420px;
+  margin-bottom: 30px;
+}
+
+span.chip{
+  border-radius: 3px;
+  padding: 4.5px;
+  position: relative;
+}
+
+span.chip.lost::before {
+    content: "💀";
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    font-size: 0.85rem;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.word{
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  margin-bottom: 30px;
+}
+
+.word > span{
+  width: 40px;
+  height: 40px;
+  background-color: #323232;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125rem;
+   border-bottom: 1px solid #F9F4DA;
+}
+
+.word > span.missed-letters{
+  color: #BA2A2A;
+}
+
+.alphabet-btn{
+  display: flex;
+  flex-wrap: wrap;
+  width: 470px;
+  justify-content: center;
+  gap: 4px;
+  margin-bottom: 36px;
+}
+
+.alphabet-btn > button{
+  width: 40px;
+  height: 40px;
+  border-radius: 3px;
+  background-color: #FCBA29;
+   border: 1px solid #D7D7D7;
+   cursor: pointer;
+}
+
+.alphabet-btn > button.correct {
+    background-color: #10A95B;
+}
+
+.alphabet-btn > button.wrong {
+    background-color: #EC5D49;
+}
+
+.alphabet-btn > button:disabled{
+   cursor: not-allowed;
+   opacity: 0.5;
+}
+
+button.new-game {
+    background-color: #11B5E5;
+    border: 1px solid #D7D7D7;
+    border-radius: 4px;
+    width: 225px;
+    height: 40px;
+    padding: 6px 12px;
+    display: block;
+    margin-inline: auto;
+    cursor: pointer;
+    font-weight:400;
+    font-size: 1rem;
+}
